@@ -30,7 +30,7 @@ Project and creative entries take a **Full write-up** (rich text). When it's fil
 ## Publishing (one-time setup)
 
 1. In this repo: **Settings → Pages → Build and deployment → Deploy from a branch**, branch `main`, folder `/ (root)`.
-2. The site appears at `https://<username>.github.io/<repo>/`. Photo paths assume the site sits at the root of a domain, so connect the custom domain before adding photos.
+2. The site appears at `https://<username>.github.io/<repo>/`. Links and photos are relative, so the site works there and on your own domain.
 3. Custom domain: in **Settings → Pages**, enter `samuraijon.com`. Then at your domain registrar, point the domain to GitHub Pages: A records `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, and a CNAME for `www` to `<username>.github.io`. Turn on **Enforce HTTPS** once the certificate is issued. Doing this takes the domain off Google Sites, so switch only when you're happy with the new site.
 
 ## Contact form

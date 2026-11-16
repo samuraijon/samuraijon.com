@@ -2,7 +2,7 @@
 const page=document.body.dataset.page||'home';
 const D=window.SITE_DATA||{},CFG=window.SITE_CONFIG||{},BODIES=window.SITE_BODIES||{};
 const esc=s=>String(s==null?'':s).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
-const img=(src,alt='')=>`<img src="${esc(src)}" alt="${esc(alt)}" loading="lazy">`;
+const img=(src,alt='')=>`<img src="${esc(String(src).replace(/^\//,''))}" alt="${esc(alt)}" loading="lazy">`;
 const links=(D.navigation||[]).map(l=>[l.url,esc(l.label),l.key,(l.children||[]).length?l.children.map(x=>[x.url,esc(x.label)]):null]);
 const nav=document.getElementById('nav');
 if(nav){nav.innerHTML=`<a class="logo" href="index.html">Dr Jonathan <span>Wei</span></a><ul>${links.map(l=>`<li${l[3]?' class="dd"':''}><a href="${l[0]}"${(l[2]===page||(l[2]==='portfolio'&&['professional','projects','creative','adventures'].includes(page)))?' aria-current="page"':''}>${l[1]}</a>${l[3]?`<ul class="sub">${l[3].map(x=>`<li><a href="${x[0]}">${x[1]}</a></li>`).join('')}</ul>`:''}</li>`).join('')}</ul>`;}

@@ -27,7 +27,7 @@ photos:
       <h2>G'day, and thanks for visiting</h2>
       <p>I'm a biomedical engineer. I grew up in Taiwan, South Africa and Australia, and now I live in Delft. I love racing and riding my bike in beautiful places, learning languages and experiencing new cultures. I build things because I want to know how they work. <a href="about.html">More about me</a></p>
     </div>
-    <div class="shots">{% for ph in page.photos %}{% if ph.image != "" %}<div class="photo"><img src="{{ ph.image | relative_url }}" alt="{{ ph.alt }}" loading="lazy"></div>{% else %}<div class="photo" data-scene="{{ ph.scene }}"></div>{% endif %}{% endfor %}</div>
+    <div class="shots">{% for ph in page.photos %}{% if ph.image != "" %}<div class="photo"><img src="{{ ph.image | remove_first: "/" }}" alt="{{ ph.alt }}" loading="lazy"></div>{% else %}<div class="photo" data-scene="{{ ph.scene }}"></div>{% endif %}{% endfor %}</div>
     <p class="note" style="margin-top:10px">Your riding photos go here.</p>
   </div>
 </section>
