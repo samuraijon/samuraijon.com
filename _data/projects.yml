@@ -1,0 +1,98 @@
+- id: 3d-printing
+  title: 3D printing experiments
+  category: Hardware
+  status: Ongoing
+  summary: Printed bike parts, fixtures and whatever else comes off the printer, with what worked and what didn't.
+  image: ''
+  body: ''
+- id: arduino-iot
+  title: Arduino and IoT builds
+  category: Hardware
+  status: Ongoing
+  summary: Sensors, wireless triggers and small connected gadgets, from the bench to the bike.
+  image: ''
+  body: ''
+- id: cad-prototypes
+  title: CAD and mechanical prototypes
+  category: Hardware
+  status: Ongoing
+  summary: Solid Edge models, FEA and CFD checks, and prototypes built to test an idea fast.
+  image: ''
+  body: ''
+- id: out-front-mount
+  title: 3D-printed out-front mount
+  category: Hardware
+  status: Experiment
+  summary: A lightweight computer and light mount, printed, load-tested and iterated.
+  image: ''
+  body: ''
+- id: power-logger
+  title: Ride data logger
+  category: Hardware
+  status: Experiment
+  summary: An ESP32 logger for cadence, speed and temperature to compare against my head unit.
+  image: ''
+  body: ''
+- id: diy-testing
+  title: DIY and test rigs
+  category: Hardware
+  status: Ongoing
+  summary: Taking things apart, building jigs and testing them until they break.
+  image: ''
+  body: ''
+- id: cycling-game
+  title: Open-world cycling game
+  category: Software & AI
+  status: In development
+  summary: A GTA-style cycling game for indoor trainers, to make riding indoors more fun and exciting.
+  image: ''
+  body: ''
+- id: ai-web-dev
+  title: AI-assisted web development
+  category: Software & AI
+  status: Active
+  summary: Websites and web apps vibe-coded with AI, starting with this one.
+  image: ''
+  body: ''
+- id: kit-index
+  title: Kit Index
+  category: Software & AI
+  status: In development
+  summary: A catalogue of the world's cycling kit brands, and a test bed for data visualisation.
+  image: ''
+  body: ''
+- id: performance-dashboard
+  title: Cycling performance dashboard
+  category: Software & AI
+  status: Planned
+  summary: Upload FIT files and get power, speed, elevation and performance analysis.
+  image: ''
+  body: ''
+- id: kit-configurator
+  title: Cycling kit configurator
+  category: Software & AI
+  status: Planned
+  summary: 'Preview a team kit live: colours, sponsor placement and a design brief.'
+  image: ''
+  body: ''
+- id: research-analytics
+  title: Research analytics platform
+  category: Software & AI
+  status: Planned
+  summary: Upload a dataset, explore it with interactive graphs and export a statistical report.
+  image: ''
+  body: ''
+- id: holiday-planner
+  title: Cycling holiday planner
+  category: Software & AI
+  status: Planned
+  summary: Custom itineraries with route maps, accommodation and daily schedules.
+  image: ''
+  body: ''
+- id: data-viz
+  title: Dashboards, APIs and data visualisation
+  category: Software & AI
+  status: Experiment
+  summary: Connecting APIs and visualising health, sport and public datasets.
+  image: ''
+  body: ''

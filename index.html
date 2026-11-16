@@ -1,0 +1,84 @@
+---
+layout: default
+title: Dr Jonathan Wei | Engineer, maker, cyclist, creator, explorer
+page_key: home
+heading: Hello, I'm Jon
+lead: Engineer, maker, cyclist, creator, explorer.<br>Always chasing the next climb.
+hero_scene: day,11
+hero_image: ''
+hero_short: false
+dynamic_heading: false
+placeholder_note: true
+permalink: /
+photos:
+- image: ''
+  alt: ''
+  scene: day,31
+- image: ''
+  alt: ''
+  scene: dawn,61
+- image: ''
+  alt: ''
+  scene: day,47
+---
+<section class="band" id="explore">
+  <div class="wrap">
+    <div class="hello">
+      <h2>G'day, and thanks for visiting</h2>
+      <p>I'm a biomedical engineer. I grew up in Taiwan, South Africa and Australia, and now I live in Delft. I love racing and riding my bike in beautiful places, learning languages and experiencing new cultures. I build things because I want to know how they work. <a href="about.html">More about me</a></p>
+    </div>
+    <div class="shots">{% for ph in page.photos %}{% if ph.image != "" %}<div class="photo"><img src="{{ ph.image | relative_url }}" alt="{{ ph.alt }}" loading="lazy"></div>{% else %}<div class="photo" data-scene="{{ ph.scene }}"></div>{% endif %}{% endfor %}</div>
+    <p class="note" style="margin-top:10px">Your riding photos go here.</p>
+  </div>
+</section>
+<section class="band soft" id="portfolio">
+  <div class="wrap">
+    <div class="sec-head"><h2>Portfolio</h2><p>My work and my hobbies, from medical devices and data to cycling kits and film. Take a look around, or head straight to my <a href="#services">services</a>. I'd love to hear your thoughts.</p></div>
+    <div class="tiles"><a class="tile" href="professional.html"><div class="scene" data-scene="day,57,0"></div><div class="cap"><h3>Professional</h3><p>Research, engineering, medical devices, regulatory and data science</p></div></a><a class="tile bp" href="projects.html"><div class="scene" data-scene="x,Engineering,bp"></div><div class="cap"><h3>Projects &amp; experiments</h3><p>What I'm building in my spare time: 3D printing, hardware and software experiments, prototypes and AI-powered apps</p></div></a><a class="tile" href="creative.html"><div class="scene" data-scene="night,5,0"></div><div class="cap"><h3>Creative media</h3><p>Photography, videography, video editing, modelling, acting and stunts on and off the bike</p></div></a><a class="tile" href="adventures.html"><div class="scene" data-scene="dawn,23"></div><div class="cap"><h3>Personal interests &amp; adventures</h3><p>Cycling, travel, places I've been, languages and other interests</p></div></a></div>
+  </div>
+</section>
+<section class="band" id="services">
+  <div class="wrap">
+    <div class="sec-head"><h2>Services</h2><p>Engineering, design and a lifetime on the bike. A rare combination, all in one place.</p></div>
+    <div class="tiles"><a class="tile bp" href="services.html#consulting"><div class="scene" data-scene="x,Software,bp"></div><div class="cap"><h3>Scientific &amp; engineering consulting</h3><p>Data, statistics, medical device R&amp;D and regulatory</p></div></a><a class="tile bp" href="services.html#studio"><div class="scene" data-scene="x,Creative,bp"></div><div class="cap"><h3>Cycling design studio</h3><p>Kit design, team identities, brand systems and the sticker shop</p></div></a><a class="tile bp" href="services.html#film"><div class="scene" data-scene="x,Effects,bp"></div><div class="cap"><h3>Special effects engineering</h3><p>Custom-engineered special effects for film</p></div></a><a class="tile" href="services.html#experiences"><div class="scene" data-scene="day,31"></div><div class="cap"><h3>Boutique cycling experiences</h3><p>Curated rides through Europe and Australia</p></div></a></div>
+  </div>
+</section>
+<section class="band deep" id="startup">
+  <div class="wrap">
+    <div class="sec-head"><h2>Startup</h2><p>I love to invent and innovate. This is where I put my technology, experience and lessons learnt to work on my next adventure.</p></div>
+    <div class="tiles single">
+      <a class="tile" href="startup.html"><div class="scene" data-scene="night,19,0"></div><div class="cap"><h3>Kinematisch</h3><p>Real-time motion intelligence that protects before impact</p></div></a>
+    </div>
+  </div>
+</section>
+<section class="band" id="about">
+  <div class="wrap">
+    <div class="sec-head"><h2>About me</h2><p>The person behind the work: where I come from, what I'm doing and where I'm going next.</p></div>
+    <div class="tiles single">
+      <a class="tile" href="about.html"><div class="scene" data-scene="day,57,0"></div><div class="cap"><h3>My story</h3><p>From Taipei to Delft, with my skills, languages and CV</p></div></a>
+    </div>
+  </div>
+</section>
+<section class="pxband" aria-label="Quote">
+  <div class="scene" data-scene="dawn,23,0" data-px></div>
+  <blockquote>The bike takes you to places where you'd not have gone otherwise.</blockquote>
+</section>
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><h2>The stage so far</h2><p>Every climb a chapter, from Taipei to Delft. <a href="professional.html">My professional background</a></p></div>
+    <div class="fig" role="img" aria-label="Jon's career drawn as a cycling stage profile: Taipei, Pretoria, Brisbane, a mechanical and aerospace engineering degree in 2012, a PhD in 2018, a postdoc at TU Delft, TNO in 2022, BSI in 2025, founder in 2026, and the next climb."><svg id="profile"></svg></div>
+  </div>
+</section>
+<section class="band blue" id="contact">
+  <div class="wrap two">
+    <div>
+      <h2>Get in touch</h2>
+      <p style="margin-top:16px">Working on something I could help with, or just want to say hi? I'd love to hear from you.</p>
+      <div class="btns"><a class="btn ghost" href="contact.html">Contact me</a></div>
+    </div>
+    <div>
+      <h3>Find me around the internet</h3>
+      {% include icons.html %}
+    </div>
+  </div>
+</section>

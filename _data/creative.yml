@@ -1,0 +1,48 @@
+- id: in-front-of-the-lens
+  title: In front of the lens
+  summary: Presenting to camera, acting in a Dutch-language course and modelling as a cyclist. Sometimes for fun, sometimes for professional assignments.
+  illustration: night,5,0
+  image: ''
+  body: ''
+- id: behind-the-lens
+  title: Photography
+  summary: From happy snaps and still life to photoshoots, capturing the magical moments I come across.
+  illustration: day,31
+  image: ''
+  body: ''
+- id: drones
+  title: Drone flying and aerial photography
+  summary: Certified EU A1/A3 open category drone pilot, capturing outdoor scenery and rides from above.
+  illustration: dawn,61
+  image: ''
+  body: ''
+- id: videography
+  title: Videography and video editing
+  summary: Shooting and editing reels, YouTube videos and short films in Premiere Pro and After Effects.
+  illustration: dawn,44,0
+  image: ''
+  body: ''
+- id: graphic-design
+  title: Graphic and digital design
+  summary: Cycling kits, house styles, brand identities and scientific posters in Illustrator and Photoshop.
+  illustration: x,Creative,bp
+  image: ''
+  body: ''
+- id: content-creation
+  title: Content creation
+  summary: Photos and videos processed, edited and published across web, Instagram and YouTube.
+  illustration: day,57,0
+  image: ''
+  body: ''
+- id: stunts
+  title: Stunts on and off the bike
+  summary: Silly stunts, staged crashes and action shots, planned with safety first.
+  illustration: day,73
+  image: ''
+  body: ''
+- id: effects-on-camera
+  title: Practical effects on camera
+  summary: Film effects stunts I've performed myself, with the engineering behind them at Special effects engineering.
+  illustration: x,Effects,bp
+  image: ''
+  body: ''

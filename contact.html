@@ -1,0 +1,34 @@
+---
+layout: default
+title: Contact | Dr Jonathan Wei
+page_key: contact
+heading: Contact
+lead: Tell me what you're working on.
+hero_scene: day,73,0
+hero_image: ''
+hero_short: true
+dynamic_heading: false
+placeholder_note: false
+---
+<section class="band">
+  <div class="wrap">
+    <div class="sec-head"><h2>Get in touch</h2><p>For general or business enquiries. Each service also has its own site and form; this one reaches me directly.</p></div>
+    <form id="cform" novalidate>
+      <div class="row2">
+        <label for="cname"><span>Name <span class="req">(required)</span></span><input id="cname" name="name" autocomplete="name" required></label>
+        <label for="cmail"><span>Email <span class="req">(required)</span></span><input id="cmail" name="email" type="email" autocomplete="email" required></label>
+      </div>
+      <label for="ctype">What it's about
+        <select id="ctype" name="type"><option>General enquiry</option><option>Business enquiry</option><option>A project or collaboration</option><option>Consulting</option><option>Cycling kit or design</option><option>Special effects</option><option>Cycling experiences</option><option>Kinematisch</option></select>
+      </label>
+      <label for="cmsg"><span>Message <span class="req">(required)</span></span><textarea id="cmsg" name="message" required></textarea></label>
+      <button class="btn main" type="submit" style="justify-self:start">Send message</button>
+      <p id="sent" role="status"></p>
+    </form>
+  </div>
+</section>
+<section class="band blue">
+  <div class="wrap">
+    <div class="sec-head" style="margin-bottom:0"><h2>Find me around the internet</h2><div>{% include icons.html %}</div></div>
+  </div>
+</section>

@@ -1,0 +1,36 @@
+- url: index.html#portfolio
+  label: Portfolio
+  key: portfolio
+  children:
+  - url: professional.html
+    label: Professional
+  - url: projects.html
+    label: Projects & experiments
+  - url: creative.html
+    label: Creative media
+  - url: adventures.html
+    label: Personal interests & adventures
+- url: services.html
+  label: Services
+  key: services
+  children:
+  - url: services.html#consulting
+    label: Scientific & engineering consulting
+  - url: services.html#studio
+    label: Cycling design studio
+  - url: services.html#film
+    label: Special effects engineering
+  - url: services.html#experiences
+    label: Boutique cycling experiences
+- url: startup.html
+  label: Startup
+  key: startup
+  children: []
+- url: about.html
+  label: About
+  key: about
+  children: []
+- url: contact.html
+  label: Contact
+  key: contact
+  children: []

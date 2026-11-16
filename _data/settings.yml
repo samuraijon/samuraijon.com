@@ -1,0 +1,2 @@
+# Paste a form endpoint here (e.g. from Formspree) to make the contact form send messages.
+contact_form_endpoint: ""

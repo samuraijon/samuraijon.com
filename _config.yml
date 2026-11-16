@@ -1,0 +1,9 @@
+# Site settings. GitHub Pages builds this site with Jekyll automatically.
+title: Dr Jonathan Wei
+url: "https://samuraijon.com"
+baseurl: ""
+
+
+exclude:
+  - README.md
+  - .pages.yml

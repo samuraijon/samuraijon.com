@@ -1,0 +1,165 @@
+# Pages CMS configuration: https://pagescms.org
+media:
+  input: images
+  output: /images
+
+content:
+  # ---------- Pages ----------
+  - name: home
+    label: "Page: Home"
+    type: file
+    path: index.html
+    format: yaml-frontmatter
+    fields: &page_fields
+      - { name: title, label: Browser tab title, type: string }
+      - { name: heading, label: Big heading, type: string }
+      - { name: lead, label: Line under the heading, type: string }
+      - { name: hero_image, label: Header photo (leave empty for the illustration), type: image }
+      - { name: hero_scene, label: Illustration used when there is no photo, type: string, hidden: true }
+      - { name: layout, type: string, hidden: true }
+      - { name: page_key, type: string, hidden: true }
+      - { name: hero_short, type: boolean, hidden: true }
+      - { name: dynamic_heading, type: boolean, hidden: true }
+      - { name: placeholder_note, type: boolean, hidden: true }
+      - { name: permalink, type: string, hidden: true }
+      - name: photos
+        label: Riding photos under the welcome text
+        type: object
+        list: true
+        fields:
+          - { name: image, label: Photo, type: image }
+          - { name: alt, label: Describe the photo, type: string }
+          - { name: scene, type: string, hidden: true }
+      - { name: body, label: Page content (HTML), type: code, options: { format: html } }
+  - name: about
+    label: "Page: About"
+    type: file
+    path: about.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: professional
+    label: "Page: Professional"
+    type: file
+    path: professional.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: adventures
+    label: "Page: Interests & adventures"
+    type: file
+    path: adventures.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: services
+    label: "Page: Services"
+    type: file
+    path: services.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: startup
+    label: "Page: Startup"
+    type: file
+    path: startup.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: contact
+    label: "Page: Contact"
+    type: file
+    path: contact.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: projects-page
+    label: "Page: Projects (intro)"
+    type: file
+    path: projects.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: creative-page
+    label: "Page: Creative media (intro)"
+    type: file
+    path: creative.html
+    format: yaml-frontmatter
+    fields: *page_fields
+
+  # ---------- Lists ----------
+  - name: projects
+    label: Projects & experiments
+    type: file
+    path: _data/projects.yml
+    list: true
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: id, label: "Web address name (lowercase, dashes, unique)", type: string, required: true }
+      - { name: category, label: Category, type: select, options: { values: [Hardware, "Software & AI"] } }
+      - { name: status, label: Status, type: select, options: { values: [Planned, Experiment, Ongoing, In development, Active, Done] } }
+      - { name: summary, label: One-line summary, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: body, label: Full write-up, type: rich-text }
+  - name: creative
+    label: Creative media
+    type: file
+    path: _data/creative.yml
+    list: true
+    fields:
+      - { name: title, label: Title, type: string, required: true }
+      - { name: id, label: "Web address name (lowercase, dashes, unique)", type: string, required: true }
+      - { name: summary, label: One-line summary, type: text }
+      - { name: image, label: Photo, type: image }
+      - { name: illustration, type: string, hidden: true }
+      - { name: body, label: Full write-up, type: rich-text }
+  - name: timeline
+    label: Experience & education
+    type: file
+    path: _data/timeline.yml
+    list: true
+    fields:
+      - { name: year, label: Year, type: string }
+      - { name: role, label: Role or degree, type: string }
+      - { name: detail, label: Where, type: string }
+  - name: languages
+    label: Languages
+    type: file
+    path: _data/languages.yml
+    list: true
+    fields:
+      - { name: language, label: Language, type: string }
+      - { name: percent, label: Bar length (0-100), type: number }
+      - { name: level, label: Level, type: string }
+  - name: crossings
+    label: Tripoints & border crossings
+    type: file
+    path: _data/crossings.yml
+    list: true
+    fields:
+      - { name: place, label: Place, type: string }
+      - { name: note, label: Countries, type: string }
+  - name: social
+    label: Social links
+    type: file
+    path: _data/social.yml
+    list: true
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: url, label: Link, type: string }
+      - { name: icon, label: "Icon (Font Awesome name, e.g. fa-instagram)", type: string }
+  - name: navigation
+    label: Menu
+    type: file
+    path: _data/navigation.yml
+    list: true
+    fields:
+      - { name: label, label: Label, type: string }
+      - { name: url, label: Link, type: string }
+      - { name: key, type: string, hidden: true }
+      - name: children
+        label: Dropdown items
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: url, label: Link, type: string }
+  - name: settings
+    label: Site settings
+    type: file
+    path: _data/settings.yml
+    fields:
+      - { name: contact_form_endpoint, label: "Contact form endpoint (e.g. Formspree URL)", type: string }
