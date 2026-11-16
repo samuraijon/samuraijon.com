@@ -15,6 +15,24 @@ Photos go in `images/` (upload them from the CMS media library). If a header pho
 
 Project and creative entries take a **Full write-up** (rich text). When it's filled in, it replaces the placeholder text on that entry's detail page.
 
+## Previewing locally
+
+You don't need this to publish — GitHub Pages builds the site for you — but to see changes before pushing:
+
+```sh
+./scripts/serve.sh          # http://127.0.0.1:4000
+./scripts/serve.sh 4001     # or another port
+```
+
+It rebuilds on every save, so keep the terminal open and refresh the browser. One-time setup on a new Mac:
+
+```sh
+brew install ruby@3.4
+gem install jekyll bundler -- --with-cppflags=-I/opt/homebrew/include
+```
+
+(The `--with-cppflags` part works around an old Apple clang missing the C23 `stdckdint.h` header.)
+
 ## Where things live
 
 | Path | What it is |
