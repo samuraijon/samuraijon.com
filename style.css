@@ -249,9 +249,6 @@ a.photo:hover{box-shadow:0 0 0 3px var(--blue)}
 .hero{border-bottom:3px solid transparent;border-image:var(--glow) 1}
 .top.solid{border-bottom:3px solid transparent;border-image:var(--glow) 1}
 /* section headings get a gradient tick */
-.sec-head h2,.hello h2{position:relative;padding-top:14px}
-.sec-head h2::before,.hello h2::before{content:"";position:absolute;top:0;left:0;width:56px;height:4px;border-radius:2px;background:var(--glow)}
-.blue .sec-head h2::before,.deep .sec-head h2::before{background:linear-gradient(90deg,#fff,var(--glow-pink),var(--glow-orange))}
 /* soft gradient haze in the pale sections */
 .soft{background-color:var(--soft);background-image:
   radial-gradient(40% 60% at 100% 0%,rgb(142 92 240/var(--glow-haze)),transparent 70%),
@@ -299,7 +296,13 @@ input:focus,textarea:focus,select:focus{outline:none;border-color:var(--glow-pur
 /* footer line */
 footer{border-top:3px solid transparent;border-image:var(--glow) 1}
 /* logo */
-.logo span{background:var(--glow-text);-webkit-background-clip:text;background-clip:text;color:transparent}
-.top:not(.solid) .logo span{background:linear-gradient(90deg,#cfe6ff,#ffd3e8,#ffc49c);-webkit-background-clip:text;background-clip:text}
 @media (prefers-reduced-motion:no-preference){.btn.main,.icons a{transition:box-shadow .2s,background .2s}}
 .tile,.hero,.photo,.p .art{background:linear-gradient(135deg,#418FDE,#8e5cf0 45%,#ff6fae 80%,#FF8A3D)}
+/* separator between sections, as on the Ronin Studio site */
+main>section.band{position:relative}
+main>section.band+section.band::before{content:"";position:absolute;top:0;left:max(5vw,16px);right:max(5vw,16px);max-width:1240px;margin:0 auto;height:1px;background:var(--glow);opacity:.35}
+main>section.blue::before,main>section.deep::before,main>section.blue+section::before,main>section.deep+section::before{display:none}
+/* full name in the gradient */
+.logo,.logo span{background:var(--glow-text);-webkit-background-clip:text;background-clip:text;color:transparent}
+.top:not(.solid) .logo,.top:not(.solid) .logo span{background:linear-gradient(90deg,#ffffff,#e6dcff 35%,#ffc2df 65%,#ffbf8f);-webkit-background-clip:text;background-clip:text;color:transparent}
+.logo span,.top:not(.solid) .logo span{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:transparent}
