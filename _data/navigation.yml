@@ -18,6 +18,10 @@
     label: Scientific & engineering consulting
   - url: services.html#studio
     label: Cycling design studio
+  - url: services.html#media
+    label: Photo, video & modelling
+  - url: services.html#web
+    label: Web studio
   - url: services.html#film
     label: Special effects engineering
   - url: services.html#experiences
