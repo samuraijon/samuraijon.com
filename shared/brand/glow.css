@@ -1,0 +1,53 @@
+/* ==========================================================================
+   Glow: the shared signature gradient for all samuraijon brands
+   Shared resources · brand/glow.css · version 2026-11-19
+   Blue → purple → pink → orange. Works in dark and light themes.
+   Use it as-is; do not copy the values into a site by hand.
+   ========================================================================== */
+
+:root{
+  --glow-blue:#418FDE;    /* PMS 279 C */
+  --glow-purple:#8e5cf0;  /* ≈ PMS 2665 C */
+  --glow-pink:#ff6fae;    /* ≈ PMS 211 C */
+  --glow-orange:#FF8A3D;  /* ≈ PMS 1575 C */
+  --glow:linear-gradient(90deg,var(--glow-blue),var(--glow-purple) 38%,var(--glow-pink) 68%,var(--glow-orange));
+  --glow-d:linear-gradient(135deg,var(--glow-blue),var(--glow-purple) 38%,var(--glow-pink) 68%,var(--glow-orange));
+  --glow-warm:linear-gradient(135deg,var(--glow-pink),var(--glow-orange));
+  --glow-cool:linear-gradient(135deg,var(--glow-blue),var(--glow-purple));
+  --glow-frame:var(--glow-purple);
+  --glow-text:linear-gradient(90deg,#7db5f0,#8e5cf0 40%,#ff6fae 70%,#FF8A3D);
+  --glow-haze:.30;
+}
+:root[data-theme=light]{
+  --glow-text:linear-gradient(90deg,#2463ad,#7c4ddb 40%,#e0457f 70%,#e8692a);
+  --glow-haze:.16;
+}
+@media (prefers-color-scheme:light){
+  :root:not([data-theme]){
+    --glow-text:linear-gradient(90deg,#2463ad,#7c4ddb 40%,#e0457f 70%,#e8692a);
+    --glow-haze:.16;
+  }
+}
+.glow-text{background:var(--glow-text);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+.glow-line{height:2px;border:0;background:var(--glow);margin:0}
+.glow-top{position:relative}
+.glow-top::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--glow);pointer-events:none}
+.glow-border-top{border-top:3px solid transparent;border-image:var(--glow) 1}
+.glow-hero{background:
+  radial-gradient(50% 70% at 75% 35%,rgb(65 143 222/var(--glow-haze)),transparent 70%),
+  radial-gradient(35% 50% at 92% 75%,rgb(142 92 240/calc(var(--glow-haze)*.7)),transparent 70%),
+  radial-gradient(35% 45% at 60% 100%,rgb(255 111 174/calc(var(--glow-haze)*.5)),transparent 70%),
+  radial-gradient(30% 40% at 100% 100%,rgb(255 138 61/calc(var(--glow-haze)*.5)),transparent 70%)}
+.glow-cta{background:
+  radial-gradient(45% 100% at 20% 100%,rgb(65 143 222/var(--glow-haze)),transparent 70%),
+  radial-gradient(45% 100% at 45% 100%,rgb(142 92 240/calc(var(--glow-haze)*.8)),transparent 70%),
+  radial-gradient(45% 100% at 70% 100%,rgb(255 111 174/calc(var(--glow-haze)*.7)),transparent 70%),
+  radial-gradient(45% 100% at 95% 100%,rgb(255 138 61/calc(var(--glow-haze)*.8)),transparent 70%)}
+.glow-btn{background:var(--glow-warm);color:#0a0d14;border:0}
+.glow-badge{background:var(--glow-d);color:#fff}
+.glow-bar{background:var(--glow);border-radius:2px}
+.glow-card{border:1.5px solid color-mix(in srgb,currentColor 14%,transparent);transition:border-color .15s,transform .15s}
+.glow-card:hover{border-color:var(--glow-frame)}
+.glow-label{display:inline-flex;align-items:center;gap:8px}
+.glow-label::before{content:"";width:18px;height:3px;border-radius:2px;background:var(--glow)}
+@media (prefers-reduced-motion:reduce){.glow-card{transition:none}}
