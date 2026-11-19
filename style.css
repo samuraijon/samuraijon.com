@@ -306,3 +306,19 @@ main>section.blue::before,main>section.deep::before,main>section.blue+section::b
 .logo,.logo span{background:var(--glow-text);-webkit-background-clip:text;background-clip:text;color:transparent}
 .top:not(.solid) .logo,.top:not(.solid) .logo span{background:linear-gradient(90deg,#ffffff,#e6dcff 35%,#ffc2df 65%,#ffbf8f);-webkit-background-clip:text;background-clip:text;color:transparent}
 .logo span,.top:not(.solid) .logo span{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:transparent}
+
+/* ===== Baby blue leads; the glow is the highlight ===== */
+.tile,.hero,.photo,.p .art{background:#2f7fd1}
+.hero::after{background:radial-gradient(40% 50% at 100% 100%,rgb(255 111 174/.28),transparent 70%),radial-gradient(35% 45% at 88% 70%,rgb(142 92 240/.2),transparent 70%)}
+.hero h1{background:none;-webkit-background-clip:border-box;background-clip:border-box;color:#fff;filter:none;text-shadow:0 1px 2px rgba(8,30,70,.25)}
+.blue{background:var(--blue);background-image:radial-gradient(40% 90% at 100% 100%,rgb(255 111 174/.35),transparent 70%),radial-gradient(35% 80% at 80% 100%,rgb(142 92 240/.25),transparent 70%)}
+.deep{background:#163f75;background-image:radial-gradient(45% 80% at 95% 100%,rgb(255 111 174/.3),transparent 70%),radial-gradient(40% 70% at 80% 0%,rgb(142 92 240/.3),transparent 70%)}
+.soft{background-color:var(--soft);background-image:radial-gradient(30% 50% at 100% 0%,rgb(142 92 240/calc(var(--glow-haze)*.6)),transparent 70%)}
+.pxband::after{background:radial-gradient(45% 70% at 100% 100%,rgb(255 111 174/.35),transparent 70%);mix-blend-mode:normal}
+.tile .cap{background:linear-gradient(transparent,rgba(8,30,70,.6))}
+.tile:hover .cap{background:linear-gradient(transparent,rgba(8,30,70,.78))}
+.btn.main{background:var(--blue);color:#fff;box-shadow:none}
+.btn.main:hover{background:var(--glow-warm);color:#2a0b18;box-shadow:0 8px 24px rgb(255 111 174/.4)}
+.filters button[aria-pressed=true]{background:var(--blue);color:#fff}
+.icons a:hover{background:var(--blue);box-shadow:0 0 0 2px var(--glow-pink)}
+.top .sub{background:var(--card);border:1px solid var(--line)}

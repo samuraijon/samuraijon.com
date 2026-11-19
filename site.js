@@ -13,9 +13,9 @@ let uid=0;
 const rnd=seed=>{let s=seed;return()=>(s=s*16807%2147483647)/2147483647};
 const ridge=(r,base,amp,n)=>{let d=`M0 900 L0 ${base}`;for(let i=0;i<=n;i++){const x=i*1600/n,y=base-amp*(.35+.65*r())*(i%2?1:.55);d+=` L${x.toFixed(0)} ${y.toFixed(0)}`}return d+' L1600 900 Z'};
 const pal={
- day:{a:"#3a7fd8",b:"#f6a9cc",far:"#b9aef2",mid:"#7f86e2",near:"#283e92",sun:"#ffe2c4"},
- dawn:{a:"#5a5ad8",b:"#ffb489",far:"#c9a8ef",mid:"#8b70d8",near:"#302c80",sun:"#fff1e0"},
- night:{a:"#0e1538",b:"#5b2f7c",far:"#4b3f92",mid:"#33307c",near:"#141a46",sun:"#ffe9f3"}};
+ day:{a:"#2f7fd1",b:"#cfe6fb",far:"#a9d0f5",mid:"#5f9fe0",near:"#1d4f90",sun:"#ffffff"},
+ dawn:{a:"#3d78cc",b:"#f3d4e4",far:"#b4cdee",mid:"#6a98d8",near:"#204a8a",sun:"#ffeede"},
+ night:{a:"#0c1a33",b:"#28508f",far:"#3b6aa8",mid:"#244d86",near:"#0f2547",sun:"#e9f2ff"}};
 const scene=(v="day",seed=7,road=true)=>{
  const p=pal[v],id='g'+(uid++),r=rnd(seed);
  let s=`<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true"><defs><linearGradient id="${id}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${p.a}"/><stop offset="1" stop-color="${p.b}"/></linearGradient></defs>`;
@@ -38,7 +38,7 @@ const blueprint=(motif)=>{
   Creative:'<path d="M640 230h110l50 50 50-50h110l70 110-70 40v260H640V380l-70-40z" fill="#fff" opacity=".95"/><path d="M670 450h260" stroke="#418fde" stroke-width="26"/>',
   Effects:'<circle cx="800" cy="450" r="46" fill="#fff"/><g stroke="#fff" stroke-width="14" stroke-linecap="round"><path d="M800 350v-50M800 550v50M700 450h-50M900 450h50M729 379l-36-36M871 521l36 36M871 379l36-36M729 521l-36 36"/></g>',
   Cycling:'<g fill="none" stroke="#fff" stroke-width="12" stroke-linejoin="round"><circle cx="640" cy="520" r="120"/><circle cx="980" cy="520" r="120"/><path d="M640 520l130-160h170l40 160M770 360l60 160H640M940 360l-30-60"/></g>'};
- let s=`<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="bp${uid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#418FDE"/><stop offset=".45" stop-color="#8e5cf0"/><stop offset=".8" stop-color="#ff6fae"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><rect width="1600" height="900" fill="url(#bp${uid++})"/>`;
+ let s=`<svg viewBox="0 0 1600 900" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><linearGradient id="bp${uid}" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2f7fd1"/><stop offset="1" stop-color="#418FDE"/></linearGradient><radialGradient id="bh${uid}" cx="1" cy="1" r=".75"><stop offset="0" stop-color="#ff6fae" stop-opacity=".55"/><stop offset=".45" stop-color="#8e5cf0" stop-opacity=".25"/><stop offset="1" stop-color="#8e5cf0" stop-opacity="0"/></radialGradient></defs><rect width="1600" height="900" fill="url(#bp${uid})"/><rect width="1600" height="900" fill="url(#bh${uid++})"/>`;
  for(let x=0;x<=1600;x+=80)s+=`<line x1="${x}" y1="0" x2="${x}" y2="900" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>`;
  for(let y=0;y<=900;y+=80)s+=`<line x1="0" y1="${y}" x2="1600" y2="${y}" stroke="#fff" stroke-opacity=".12" stroke-width="2"/>`;
  return s+(m[motif]||'')+'</svg>';
