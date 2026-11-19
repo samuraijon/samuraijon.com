@@ -49,6 +49,12 @@ content:
     path: adventures.html
     format: yaml-frontmatter
     fields: *page_fields
+  - name: portfolio
+    label: "Page: Portfolio"
+    type: file
+    path: portfolio.html
+    format: yaml-frontmatter
+    fields: *page_fields
   - name: services
     label: "Page: Services"
     type: file

@@ -232,3 +232,8 @@ a.p:hover,a.p:focus-visible{box-shadow:0 0 0 3px var(--blue);border-color:var(--
 
 /* photos uploaded through the CMS */
 .scene img,.photo img,.art img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+
+.hlink{color:inherit;text-decoration:none}
+.hlink:hover{text-decoration:underline;text-decoration-thickness:3px;text-underline-offset:6px;text-decoration-color:var(--blue)}
+a.photo{display:block}
+a.photo:hover{box-shadow:0 0 0 3px var(--blue)}
