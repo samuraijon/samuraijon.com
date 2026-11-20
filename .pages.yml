@@ -12,6 +12,7 @@ content:
     format: yaml-frontmatter
     fields: &page_fields
       - { name: title, label: Browser tab title, type: string }
+      - { name: description, label: Search engine description (about 150 characters), type: text }
       - { name: heading, label: Big heading, type: string }
       - { name: lead, label: Line under the heading, type: string }
       - { name: hero_image, label: Header photo (leave empty for the illustration), type: image }

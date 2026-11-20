@@ -5,6 +5,20 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{{ page.title }}</title>
 {% if page.description %}<meta name="description" content="{{ page.description | escape }}">{% endif %}
+<link rel="canonical" href="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+<meta name="author" content="Dr Jonathan Wei">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Dr Jonathan Wei">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ site.baseurl }}{{ page.url | replace: 'index.html', '' }}">
+<meta property="og:locale" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.description | escape }}">
+<meta name="theme-color" content="#418FDE">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jonathan Wei","honorificPrefix":"Dr","url":"{{ site.url }}","jobTitle":"Biomedical engineer","address":{"@type":"PostalAddress","addressLocality":"Delft","addressCountry":"NL"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Queensland"}],"knowsLanguage":["en","zh","nl","fr","es","af"],"sameAs":[{% for s in site.data.social %}"{{ s.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -20,7 +34,20 @@
 <main>
 {{ content }}
 </main>
-<footer id="foot"></footer>
+<footer class="foot" id="foot">
+  <div class="fwrap">
+    <div class="fl">
+      <p>Made with love and coffee in Delft, the Netherlands.</p>
+      <p><a href="contact.html">Contact Jonathan</a></p>
+      <p>© <span id="yr">2026</span> Jonathan Wei</p>
+    </div>
+    <nav class="fr" aria-label="Footer">
+      <div><b><a href="portfolio.html">Portfolio</a></b><a href="professional.html">Professional</a><a href="projects.html">Projects &amp; experiments</a><a href="creative.html">Creative media</a><a href="adventures.html">Interests &amp; adventures</a></div>
+      <div><b><a href="services.html">Services</a></b><a href="services.html#consulting">Consulting</a><a href="services.html#studio">Cycling design studio</a><a href="services.html#media">Photo, video &amp; modelling</a><a href="services.html#web">Web studio</a><a href="services.html#film">Special effects engineering</a><a href="services.html#experiences">Cycling experiences</a></div>
+      <div><b>More</b><a href="startup.html">Startup</a><a href="about.html">About me</a><a href="contact.html">Contact</a></div>
+    </nav>
+  </div>
+</footer>
 <script>window.SITE_DATA = {{ site.data | jsonify }}; window.SITE_CONFIG = {{ site.data.settings | jsonify }};
 window.SITE_BODIES = { {% for p in site.data.projects %}{% if p.body and p.body != "" %}{{ p.id | jsonify }}: {{ p.body | markdownify | jsonify }},{% endif %}{% endfor %}{% for p in site.data.creative %}{% if p.body and p.body != "" %}{{ p.id | jsonify }}: {{ p.body | markdownify | jsonify }},{% endif %}{% endfor %} };</script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/brands.min.js"></script>

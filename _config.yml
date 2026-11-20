@@ -7,3 +7,6 @@ baseurl: ""
 exclude:
   - README.md
   - .pages.yml
+
+plugins:
+  - jekyll-sitemap

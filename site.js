@@ -7,7 +7,10 @@ const links=(D.navigation||[]).map(l=>[l.url,esc(l.label),l.key,(l.children||[])
 const nav=document.getElementById('nav');
 if(nav){nav.innerHTML=`<a class="logo" href="index.html">Dr Jonathan <span>Wei</span></a><ul>${links.map(l=>`<li${l[3]?' class="dd"':''}><a href="${l[0]}"${(l[2]===page||(l[2]==='portfolio'&&['professional','projects','creative','adventures'].includes(page)))?' aria-current="page"':''}>${l[1]}</a>${l[3]?`<ul class="sub">${l[3].map(x=>`<li><a href="${x[0]}">${x[1]}</a></li>`).join('')}</ul>`:''}</li>`).join('')}</ul>`;}
 const foot=document.getElementById('foot');
-if(foot){foot.innerHTML=`<span>Made with love and coffee in Delft, the Netherlands.</span><span><a href="contact.html">Contact</a> · © Jonathan Wei</span>`;}
+const yr=document.getElementById('yr');if(yr)yr.textContent=new Date().getFullYear();
+/* sticky menu: solid background once the page scrolls */
+const topbar=document.getElementById('nav');
+if(topbar){const st=()=>topbar.classList.toggle('scrolled',scrollY>30);addEventListener('scroll',st,{passive:true});st();}
 
 let uid=0;
 const rnd=seed=>{let s=seed;return()=>(s=s*16807%2147483647)/2147483647};
