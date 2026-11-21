@@ -2,18 +2,18 @@
    IDEA a race roadbook: big mountain picture up front, each section a stage you can ride into
    PICTURE full-screen photo hero (illustrated mountain pass until the real photos go in); life drawn as a stage profile on About
    COLOUR white ground, WTOS baby blue #418FDE, deep Delft blue ink, climber's-jersey red only for summits and live status
-   TYPE Barlow Condensed (roadbook signage) for display, Barlow for text
+   TYPE D-DIN Condensed (DIN 1451, the German road-sign lettering) for display, D-DIN for text
    LAYOUT homepage = hero + one line + section tiles; detail lives on its own page; phone stacks title, picture, tiles */
 :root{color-scheme:light dark;--bg:light-dark(#ffffff,#0c1a33);--ink:light-dark(#0e1d33,#eaf2fc);--mute:light-dark(#4a5d78,#a9bdd8);--blue:#418fde;--deep:light-dark(#1b4e8f,#9cc8f4);--red:light-dark(#d4232c,#ff6b70);--soft:light-dark(#eaf3fc,#13284a);--line:light-dark(#d3e2f3,#26406a);--card:light-dark(#ffffff,#102341)}
 :root[data-theme=light]{color-scheme:light}
 :root[data-theme=dark]{color-scheme:dark}
 *{box-sizing:border-box;min-width:0}
 html,body{overscroll-behavior-x:auto}
-body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 Barlow,system-ui,sans-serif;overflow-x:clip}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.6 "D-DIN",system-ui,sans-serif;overflow-x:clip}
 a{color:var(--deep);text-underline-offset:3px}
 a:focus-visible,button:focus-visible,input:focus-visible,textarea:focus-visible,select:focus-visible,summary:focus-visible{outline:3px solid var(--blue);outline-offset:2px}
 img{max-width:100%}
-h1,h2,h3{font-family:"Barlow Condensed",Barlow,sans-serif;line-height:1.05;letter-spacing:-.01em;margin:0;text-wrap:balance}
+h1,h2,h3{font-family:"D-DIN Condensed","D-DIN",sans-serif;line-height:1.05;letter-spacing:-.01em;margin:0;text-wrap:balance}
 h1{font-size:clamp(48px,7vw,92px);font-weight:800}
 h2{font-size:clamp(34px,5vw,52px);font-weight:700}
 h3{font-size:24px;font-weight:700}
@@ -30,7 +30,7 @@ p{margin:0 0 1em;max-width:66ch}
 /* navigation */
 .top{position:absolute;inset:0 0 auto 0;z-index:5;display:flex;flex-wrap:wrap;align-items:center;gap:8px 24px;padding:18px max(5vw,16px)}
 .top.solid{position:static;border-bottom:1px solid var(--line)}
-.logo{font:600 28px/1 "Barlow Condensed",sans-serif;color:#fff;text-decoration:none;margin-right:auto}
+.logo{font:600 28px/1 "D-DIN Condensed",sans-serif;color:#fff;text-decoration:none;margin-right:auto}
 .logo span{color:#cfe6ff}
 .solid .logo{color:var(--ink)}
 .solid .logo span{color:var(--blue)}
@@ -51,14 +51,14 @@ p{margin:0 0 1em;max-width:66ch}
 .pxband{position:relative;min-height:62vh;display:grid;place-items:center;overflow:hidden;background:#3d6fc0;padding:40px max(5vw,16px)}
 .pxband .scene{position:absolute;inset:-50% 0;will-change:transform}
 .pxband .scene svg,.hero .scene svg{width:100%;height:100%;display:block}
-.pxband blockquote{position:relative;margin:0;max-width:22ch;text-align:center;color:#fff;font:700 clamp(32px,5vw,60px)/1.08 "Barlow Condensed",sans-serif;text-wrap:balance;text-shadow:0 1px 2px rgba(8,30,70,.3)}
+.pxband blockquote{position:relative;margin:0;max-width:22ch;text-align:center;color:#fff;font:700 clamp(32px,5vw,60px)/1.08 "D-DIN Condensed",sans-serif;text-wrap:balance;text-shadow:0 1px 2px rgba(8,30,70,.3)}
 .hero .scene svg{width:100%;height:100%;display:block}
 .hero .txt{position:relative;padding:0 max(5vw,16px) clamp(32px,6vw,72px);max-width:1240px;width:100%;margin:0 auto}
 .hero h1{color:#fff;text-shadow:0 1px 2px rgba(8,30,70,.25)}
-.hero .lead{font:600 clamp(22px,2.6vw,30px)/1.2 "Barlow Condensed",sans-serif;margin:12px 0 0;max-width:42ch;text-shadow:0 1px 2px rgba(8,30,70,.3)}
+.hero .lead{font:600 clamp(22px,2.6vw,30px)/1.2 "D-DIN Condensed",sans-serif;margin:12px 0 0;max-width:42ch;text-shadow:0 1px 2px rgba(8,30,70,.3)}
 .hero .ph{position:absolute;right:max(5vw,16px);bottom:14px;font-size:13px;opacity:.85}
 .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;font:600 17px Barlow,sans-serif;text-decoration:none;border:2px solid var(--blue);cursor:pointer}
+.btn{display:inline-flex;align-items:center;min-height:46px;padding:0 22px;border-radius:999px;font:600 17px "D-DIN",sans-serif;text-decoration:none;border:2px solid var(--blue);cursor:pointer}
 .btn.main{background:var(--blue);color:#fff}
 .btn.main:hover{background:var(--deep);border-color:var(--deep)}
 .btn.ghost{border-color:#fff;color:#fff;background:rgba(255,255,255,.08)}
@@ -92,7 +92,7 @@ p{margin:0 0 1em;max-width:66ch}
 .sec-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:16px 18px;align-items:start;margin-bottom:32px}
 .sec-head p{margin:0}
 .filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
-.filters button{font:600 15px Barlow,sans-serif;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
+.filters button{font:600 15px "D-DIN",sans-serif;min-height:44px;padding:0 18px;border-radius:999px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);cursor:pointer}
 .filters button[aria-pressed=true]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,280px),1fr));gap:18px}
 .p{display:flex;flex-direction:column;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
@@ -108,9 +108,9 @@ p{margin:0 0 1em;max-width:66ch}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:40px 64px}
 details{border-top:1px solid var(--line)}
 details:last-child{border-bottom:1px solid var(--line)}
-summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font:700 24px/1.15 "Barlow Condensed",sans-serif}
+summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:16px;align-items:center;padding:16px 0;font:700 24px/1.15 "D-DIN Condensed",sans-serif}
 summary::-webkit-details-marker{display:none}
-summary::after{content:"+";font:400 30px/1 Barlow,sans-serif;color:var(--blue)}
+summary::after{content:"+";font:400 30px/1 "D-DIN",sans-serif;color:var(--blue)}
 details[open] summary::after{content:"–"}
 details .in{padding:0 0 20px}
 
@@ -130,11 +130,11 @@ details .in{padding:0 0 20px}
 /* about */
 .fig{position:relative;height:clamp(300px,34vw,420px);margin-top:12px}
 .fig svg{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
-.fig svg text{font-family:Barlow,sans-serif;paint-order:stroke;stroke:var(--bg);stroke-width:4px}
+.fig svg text{font-family:"D-DIN",sans-serif;paint-order:stroke;stroke:var(--bg);stroke-width:4px}
 .timeline{list-style:none;margin:0;padding:0;border-left:3px solid var(--blue)}
 .timeline li{position:relative;padding:0 0 22px 24px}
 .timeline li::before{content:"";position:absolute;left:-9px;top:6px;width:15px;height:15px;border-radius:50%;background:var(--bg);border:3px solid var(--blue)}
-.timeline .y{font:700 20px/1.2 "Barlow Condensed",sans-serif;color:var(--deep);white-space:nowrap}
+.timeline .y{font:700 20px/1.2 "D-DIN Condensed",sans-serif;color:var(--deep);white-space:nowrap}
 .timeline b{display:block;font-weight:600}
 .timeline span{color:var(--mute);font-size:16px}
 .langs{display:grid;gap:14px;margin-top:8px}
@@ -158,11 +158,11 @@ details .in{padding:0 0 20px}
 .social{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:14px}
 .s{display:block;padding:18px 20px;border-radius:14px;border:1px solid var(--line);background:var(--card);text-decoration:none;color:var(--ink)}
 .s:hover{border-color:var(--blue)}
-.s b{display:block;font:700 22px/1.1 "Barlow Condensed",sans-serif;color:var(--deep)}
+.s b{display:block;font:700 22px/1.1 "D-DIN Condensed",sans-serif;color:var(--deep)}
 .s span{font-size:15px;color:var(--mute)}
 form{display:grid;gap:14px}
 label{font-weight:600;font-size:15px;display:grid;gap:6px}
-input,textarea,select{font:16px Barlow,sans-serif;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);width:100%}
+input,textarea,select{font:16px "D-DIN",sans-serif;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:var(--card);color:var(--ink);width:100%}
 textarea{min-height:140px;resize:vertical}
 .row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
 #sent{font-weight:600;color:var(--deep);min-height:1.5em;margin:0}
@@ -181,7 +181,7 @@ footer{padding:28px max(5vw,16px);border-top:1px solid var(--line);font-size:15p
 .noicons .vh{position:static;width:auto;height:auto;clip:auto;overflow:visible}
 
 .pitch{display:flex;flex-direction:column;justify-content:center}
-.pitch .tri{font:800 clamp(34px,4.4vw,52px)/1.02 "Barlow Condensed",sans-serif;margin:0 0 18px}
+.pitch .tri{font:800 clamp(34px,4.4vw,52px)/1.02 "D-DIN Condensed",sans-serif;margin:0 0 18px}
 .pitch p{max-width:52ch}
 
 .top ul li{position:relative}

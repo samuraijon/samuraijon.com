@@ -19,9 +19,9 @@
 <meta name="twitter:description" content="{{ page.description | escape }}">
 <meta name="theme-color" content="#418FDE">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Jonathan Wei","honorificPrefix":"Dr","url":"{{ site.url }}","jobTitle":"Biomedical engineer","address":{"@type":"PostalAddress","addressLocality":"Delft","addressCountry":"NL"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Queensland"}],"knowsLanguage":["en","zh","nl","fr","es","af"],"sameAs":[{% for s in site.data.social %}"{{ s.url }}"{% unless forloop.last %},{% endunless %}{% endfor %}]}</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700;800&family=Barlow:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+<link rel="preload" href="shared/fonts/d-din/D-DIN.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="shared/fonts/d-din/D-DINCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="shared/fonts/d-din/d-din.css">
 <link rel="stylesheet" href="shared/brand/glow.css">
 <link rel="stylesheet" href="style.css">
 </head>
