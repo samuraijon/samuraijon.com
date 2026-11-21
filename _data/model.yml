@@ -1,0 +1,39 @@
+# Model comp card. Fill in the empty values in Pages CMS; empty ones show as "to add".
+name: Jonathan Wei
+based_in: Delft, the Netherlands (also available in Australia)
+headline: Sports and cycling model. Real rider, real kit, real riding.
+stats:
+  - { label: Height, value: '' }
+  - { label: Chest, value: '' }
+  - { label: Waist, value: '' }
+  - { label: Inseam, value: '' }
+  - { label: Jacket / jersey size, value: '' }
+  - { label: Shoe size (EU), value: '' }
+  - { label: Hair colour, value: '' }
+  - { label: Hair length, value: '' }
+  - { label: Eyes, value: '' }
+  - { label: Look / heritage, value: '' }
+specialities:
+  - Cycling apparel
+  - Bikes and components
+  - Running and sportswear
+  - Jackets and outdoor wear
+  - Helmets, eyewear and accessories
+  - Brand ambassador and influencer
+available_for:
+  - Catalogue and e-commerce shoots
+  - Action shoots on the bike, road and gravel
+  - Campaign and lookbook
+  - Video, presenting and short-form content
+  - Product launches and events
+skills:
+  - Races A grade: holds a line, rides close to camera vehicles safely
+  - Comfortable on camera and presenting
+  - English, Mandarin, Dutch and French
+  - Certified EU A1/A3 drone pilot
+photos:
+  - { label: Headshot, image: '', scene: 'day,57,0' }
+  - { label: Full length, image: '', scene: 'dawn,23,0' }
+  - { label: On the bike, image: '', scene: 'day,31' }
+  - { label: In kit, image: '', scene: 'dawn,61' }
+comp_card_pdf: ''

@@ -129,4 +129,22 @@ if(document.querySelector('.icons'))setTimeout(()=>{if(!document.querySelector('
 /* scroll-down button glides to the next section */
 const dn=document.querySelector('.down');
 if(dn){dn.addEventListener('click',e=>{const t=document.querySelector(dn.getAttribute('href'));if(!t)return;e.preventDefault();t.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'})});}
+
+/* model comp card */
+const comp=document.getElementById('comp');
+if(comp&&D.model){
+ const m=D.model,esc=x=>String(x??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+ const ph=(p,cls)=>`<figure class="cshot ${cls}">${p.image?`<img src="${esc(p.image.replace(/^\//,''))}" alt="${esc(p.label)}">`:`<div class="photo" data-scene="${esc(p.scene)}"></div>`}<figcaption>${esc(p.label)}</figcaption></figure>`;
+ const photos=m.photos||[];
+ comp.innerHTML=`<div class="cshots">${photos.map((p,i)=>ph(p,i?'':'main')).join('')}</div>
+ <div class="cinfo">
+  <h2>${esc(m.name)}</h2><p class="cbase">${esc(m.based_in)}</p><p>${esc(m.headline)}</p>
+  <table class="cstats"><tbody>${(m.stats||[]).map(s=>`<tr><th scope="row">${esc(s.label)}</th><td>${s.value?esc(s.value):'<span class="todo">to add</span>'}</td></tr>`).join('')}</tbody></table>
+  <h3>Specialities</h3><div class="chips">${(m.specialities||[]).map(x=>`<span>${esc(x)}</span>`).join('')}</div>
+  <h3>Available for</h3><ul class="ticks">${(m.available_for||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+  <h3>Skills</h3><ul class="ticks">${(m.skills||[]).map(x=>`<li>${esc(x)}</li>`).join('')}</ul>
+  <div class="btns"><a class="btn main" href="contact.html">Book me</a>${m.comp_card_pdf?`<a class="btn alt" href="${esc(m.comp_card_pdf.replace(/^\//,''))}">Download comp card (PDF)</a>`:''}</div>
+ </div>`;
+ comp.querySelectorAll('[data-scene]').forEach(el=>{const [v,sd,rd]=el.dataset.scene.split(',');el.innerHTML=rd==='bp'?blueprint(sd):scene(v,+sd,rd!=='0')});
+}
 }

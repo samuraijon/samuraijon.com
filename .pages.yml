@@ -101,6 +101,40 @@ content:
       - { name: summary, label: One-line summary, type: text }
       - { name: image, label: Photo, type: image }
       - { name: body, label: Full write-up, type: rich-text }
+  - name: modelling-page
+    label: "Page: Model comp card"
+    type: file
+    path: modelling.html
+    format: yaml-frontmatter
+    fields: *page_fields
+  - name: model
+    label: "Model comp card details"
+    type: file
+    path: _data/model.yml
+    format: yaml
+    fields:
+      - { name: name, label: Name, type: string }
+      - { name: based_in, label: Based in, type: string }
+      - { name: headline, label: Headline, type: string }
+      - name: stats
+        label: Measurements and look
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Label, type: string }
+          - { name: value, label: Value, type: string }
+      - { name: specialities, label: Specialities, type: string, list: true }
+      - { name: available_for, label: Available for, type: string, list: true }
+      - { name: skills, label: Skills, type: string, list: true }
+      - name: photos
+        label: Photos (first one is the large headshot)
+        type: object
+        list: true
+        fields:
+          - { name: label, label: Caption, type: string }
+          - { name: image, label: Photo, type: image }
+          - { name: scene, label: Illustration if no photo, type: string, hidden: true }
+      - { name: comp_card_pdf, label: Comp card PDF, type: file }
   - name: creative
     label: Creative media
     type: file
