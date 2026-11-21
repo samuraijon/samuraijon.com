@@ -1,0 +1,13 @@
+/* DINish: an open-licence DIN 1451 family by playbeing, derived from Altinn-DIN and Datto's D-DIN (Charles Nix, Monotype).
+   SIL Open Font License 1.1, see OFL.txt in this folder. Normal width only, Light 300 to Black 900. Self-hosted. */
+@font-face{font-family:"DINish";src:url("DINish-Light.woff2") format("woff2");font-weight:300;font-style:normal;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-LightItalic.woff2") format("woff2");font-weight:300;font-style:italic;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-Regular.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-Italic.woff2") format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-Medium.woff2") format("woff2");font-weight:500;font-style:normal;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-MediumItalic.woff2") format("woff2");font-weight:500;font-style:italic;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-SemiBold.woff2") format("woff2");font-weight:600;font-style:normal;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-Bold.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-BoldItalic.woff2") format("woff2");font-weight:700;font-style:italic;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-Heavy.woff2") format("woff2");font-weight:800;font-style:normal;font-display:swap}
+@font-face{font-family:"DINish";src:url("DINish-Black.woff2") format("woff2");font-weight:900;font-style:normal;font-display:swap}
